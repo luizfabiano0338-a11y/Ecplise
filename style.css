@@ -1,0 +1,908 @@
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080808;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    background-color: #080808;
+    border-bottom: 1px solid #fff;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.logo span {
+    color: #888;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.cabecalho nav {
+    display: flex;
+    gap: 10px;
+}
+
+.cabecalho nav a {
+    color: #aaa;
+    text-decoration: none;
+    padding: 12px 22px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.cabecalho nav a:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+
+/* =================================
+   HERO - PÁGINA PRINCIPAL
+================================= */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 7%;
+    background-color: #080808;
+}
+
+.hero-texto {
+    max-width: 650px;
+}
+
+.subtitulo {
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.hero h2 span {
+    color: #888;
+}
+
+.hero-texto > p:not(.subtitulo) {
+    max-width: 450px;
+    color: #999;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.botao {
+    display: inline-block;
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #aaa;
+}
+
+
+/* =================================
+   PRODUTOS
+================================= */
+
+.produtos {
+    padding: 100px 7%;
+    background-color: #0d0d0d;
+}
+
+.titulo-secao {
+    margin-bottom: 50px;
+}
+
+.titulo-secao span {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.titulo-secao h2 {
+    font-size: 48px;
+    letter-spacing: -2px;
+    margin-top: 8px;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.produto {
+    background-color: #111;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-8px);
+    border-color: #555;
+}
+
+.imagem-produto {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-color: #080808;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem-produto img {
+    width: 100%;
+    height: 100%;
+    /* Alterado de cover para contain para não cortar as estampas das camisetas */
+    object-fit: contain; 
+    display: block;
+    transition: 0.4s;
+    padding: 15px;
+}
+
+.produto:hover .imagem-produto img {
+    transform: scale(1.05);
+}
+
+.informacoes {
+    padding: 25px;
+}
+
+.categoria {
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.informacoes h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.informacoes p {
+    color: #aaa;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   BOTÃO COMPRAR
+================================= */
+
+.botao-comprar {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #444;
+    text-decoration: none;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.botao-comprar:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+
+
+/* =================================
+   PÁGINA SOBRE NÓS
+================================= */
+
+.sobre-pagina {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 10%;
+    background: linear-gradient(
+        90deg,
+        #080808 0%,
+        #080808 60%,
+        #111 100%
+    );
+    border-bottom: 1px solid #222;
+}
+
+.sobre-conteudo {
+    max-width: 750px;
+}
+
+.sobre-subtitulo {
+    display: inline-block;
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.sobre-conteudo h1 {
+    font-size: clamp(44px, 7vw, 82px);
+    line-height: 0.98;
+    letter-spacing: -3px;
+    margin-bottom: 35px;
+}
+
+.sobre-conteudo p {
+    max-width: 600px;
+    color: #999;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.sobre-frase {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin: 35px 0;
+}
+
+.sobre-conteudo .botao-comprar {
+    display: inline-block;
+    width: auto;
+    padding: 16px 25px;
+}
+
+
+/* =================================
+   PILARES DA MARCA
+================================= */
+
+.sobre-pilares {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 80px 10%;
+    background-color: #0d0d0d;
+}
+
+.pilar {
+    padding: 30px;
+    border: 1px solid #292929;
+    background-color: #101010;
+    transition: 0.3s;
+}
+
+.pilar:hover {
+    transform: translateY(-5px);
+    border-color: #777;
+}
+
+.pilar h2 {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.pilar h3 {
+    font-size: 17px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.pilar p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   RODAPÉ
+================================= */
+
+footer {
+    padding: 30px 7%;
+    text-align: center;
+    background-color: #080808;
+    border-top: 1px solid #222;
+}
+
+footer p {
+    color: #666;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+/* =================================
+   PÁGINA DE CONTATO
+================================= */
+
+.contato-pagina {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+    background: #080808;
+}
+
+.contato-conteudo {
+    max-width: 650px;
+    width: 100%;
+}
+
+.contato-subtitulo {
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.contato-conteudo h2 {
+    font-size: clamp(38px, 7vw, 68,px);
+    line-height: 1.1;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+.contato-conteudo p {
+    color: #bbb;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.contato-info {
+    margin: 35px 0;
+}
+
+.contato-info h3 {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.contato-info a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #666;
+    padding-bottom: 5px;
+}
+
+.contato-info a:hover {
+    color: #aaa;
+}
+
+.rodape-contato {
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 1px solid #222;
+    color: #888;
+    font-size: 13px;
+}
+
+/* Formulário de contato específico */
+.formulario-contato {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #111;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #222;
+}
+
+.formulario-contato input[type="text"],
+.formulario-contato input[type="email"],
+.formulario-contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 900px) {
+    .grade-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imagem-produto {
+        height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .cabecalho nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cabecalho nav a {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+
+    .sobre-pagina {
+        min-height: auto;
+        padding: 80px 7%;
+    }
+
+    .sobre-conteudo h1 {
+        letter-spacing: -2px;
+    }
+
+    .sobre-pilares {
+        grid-template-columns: 1fr;
+        padding: 50px 7%;
+    }
+}
+
+@media (max-width: 480px) {
+    .grade-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-produto {
+        height: 380px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 36px;
+    }
+
+    .sobre-conteudo h1 {
+        font-size: 44px;
+    }
+}
+
+
+
+/* ========================================
+   ECLIPSE — CHECKOUT
+   Wear The Darkness
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.pagina-checkout {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at top, #1b1b1b 0%, #090909 48%, #050505 100%);
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.pagina-checkout .checkout-cabecalho {
+    width: 100%;
+    min-height: 100px;
+    padding: 22px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-bottom: 1px solid #252525;
+    background: rgba(8, 8, 8, 0.92);
+}
+
+.pagina-checkout .logo {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.pagina-checkout .logo h1 {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.pagina-checkout .logo span {
+    margin-top: 5px;
+    color: #999999;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.pagina-checkout .checkout-cabecalho > p {
+    color: #aaaaaa;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+/* ========================================
+   ÁREA PRINCIPAL
+======================================== */
+
+.pagina-checkout .checkout {
+    width: min(100% - 36px, 620px);
+    margin: 55px auto 70px;
+    padding: 38px;
+    background: linear-gradient(145deg, #151515, #0e0e0e);
+    border: 1px solid #292929;
+    border-radius: 14px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+}
+
+/* ========================================
+   TÍTULO
+======================================== */
+
+.pagina-checkout .checkout-titulo {
+    margin-bottom: 35px;
+}
+
+.pagina-checkout .checkout-subtitulo {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #a5a5a5;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.pagina-checkout .checkout-titulo h2 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: clamp(28px, 5vw, 36px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.pagina-checkout .checkout-titulo p {
+    color: #999999;
+    font-size: 14px;
+}
+
+/* ========================================
+   FORMULÁRIO
+======================================== */
+
+.pagina-checkout #formulario-pagamento {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.pagina-checkout #formulario-pagamento fieldset {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid #303030;
+    border-radius: 10px;
+}
+
+.pagina-checkout #formulario-pagamento legend {
+    padding: 0 10px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.pagina-checkout #formulario-pagamento > fieldset > label:not(.opcao-pagamento) {
+    display: block;
+    margin: 14px 0 7px;
+    color: #c8c8c8;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Campos de texto */
+
+.pagina-checkout #formulario-pagamento input[type="text"],
+.pagina-checkout #formulario-pagamento input[type="email"] {
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 15px;
+    background: #090909;
+    color: #ffffff;
+    border: 1px solid #383838;
+    border-radius: 7px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.pagina-checkout #formulario-pagamento input::placeholder {
+    color: #686868;
+}
+
+.pagina-checkout #formulario-pagamento input[type="text"]:focus,
+.pagina-checkout #formulario-pagamento input[type="email"]:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.07);
+}
+
+/* ========================================
+   FORMAS DE PAGAMENTO
+======================================== */
+
+.pagina-checkout .opcao-pagamento {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 12px;
+    padding: 16px;
+    background: #101010;
+    border: 1px solid #303030;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.pagina-checkout .opcao-pagamento:hover {
+    background: #1a1a1a;
+    border-color: #777777;
+}
+
+.pagina-checkout .opcao-pagamento:has(input:checked) {
+    background: #202020;
+    border-color: #f5f5f5;
+}
+
+.pagina-checkout .opcao-pagamento input[type="radio"] {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    accent-color: #ffffff;
+    cursor: pointer;
+}
+
+.pagina-checkout .opcao-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.pagina-checkout .opcao-texto strong {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.pagina-checkout .opcao-texto small {
+    color: #999999;
+    font-size: 12px;
+}
+
+/* ========================================
+   RESUMO DA COMPRA
+======================================== */
+
+.pagina-checkout .resumo-compra {
+    padding: 24px;
+    background: #090909;
+    border: 1px solid #303030;
+    border-radius: 10px;
+}
+
+.pagina-checkout .resumo-compra h3 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.pagina-checkout .resumo-linha {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 13px;
+    color: #a7a7a7;
+    font-size: 13px;
+}
+
+.pagina-checkout .resumo-linha span:last-child {
+    color: #eeeeee;
+    text-align: right;
+}
+
+.pagina-checkout .resumo-linha.total {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #333333;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pagina-checkout .resumo-linha.total span:last-child {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* ========================================
+   BOTÃO CONTINUAR
+======================================== */
+
+.pagina-checkout .botao-finalizar {
+    width: 100%;
+    min-height: 54px;
+    padding: 15px 20px;
+    background: #ffffff;
+    color: #080808;
+    border: 1px solid #ffffff;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.pagina-checkout .botao-finalizar:hover {
+    background: #d8d8d8;
+    border-color: #d8d8d8;
+    transform: translateY(-2px);
+}
+
+.pagina-checkout .botao-finalizar:active {
+    transform: translateY(0);
+}
+
+.pagina-checkout .aviso-seguranca {
+    margin-top: -15px;
+    color: #777777;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* ========================================
+   VOLTAR PARA A LOJA
+======================================== */
+
+.pagina-checkout .voltar-loja {
+    display: table;
+    margin: 28px auto 0;
+    color: #aaaaaa;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.pagina-checkout .voltar-loja:hover {
+    color: #ffffff;
+}
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+.pagina-checkout .rodape-checkout {
+    padding: 25px 18px;
+    border-top: 1px solid #222222;
+    text-align: center;
+}
+
+.pagina-checkout .rodape-checkout p {
+    color: #777777;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .pagina-checkout .checkout-cabecalho {
+        min-height: 85px;
+        padding: 18px 20px;
+        gap: 12px;
+    }
+
+    .pagina-checkout .logo h1 {
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+
+    .pagina-checkout .logo span {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .pagina-checkout .checkout-cabecalho > p {
+        max-width: 125px;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .pagina-checkout .checkout {
+        width: calc(100% - 24px);
+        margin: 28px auto 40px;
+        padding: 23px 17px;
+        border-radius: 10px;
+    }
+
+    .pagina-checkout .checkout-titulo {
+        margin-bottom: 27px;
+    }
+
+    .pagina-checkout #formulario-pagamento fieldset {
+        padding: 17px 13px;
+    }
+
+    .pagina-checkout .opcao-pagamento {
+        padding: 13px 11px;
+    }
+
+    .pagina-checkout .resumo-compra {
+        padding: 19px 15px;
+    }
+
+}

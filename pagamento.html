@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finalizar compra | Eclipse</title>
+
+    <link rel="stylesheet" href="pagamento.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="pagamento.js" defer></script>
+</head>
+
+<body class="pagina-checkout">
+
+    <!-- CABEÇALHO -->
+    <header class="checkout-cabecalho">
+
+        <a href="roupas.html" class="logo">
+            <h1>Eclipse</h1>
+            <span>Wear The Darkness</span>
+        </a>
+
+        <p>FINALIZAÇÃO DE COMPRA</p>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="checkout">
+
+        <div class="checkout-titulo">
+            <span class="checkout-subtitulo">QUASE LÁ</span>
+
+            <h2>Finalizar compra</h2>
+
+            <p>Preencha seus dados e escolha a forma de pagamento.</p>
+        </div>
+
+
+        <!-- FORMULÁRIO -->
+        <form id="formulario-pagamento">
+
+            <!-- DADOS DO CLIENTE -->
+            <fieldset>
+
+                <legend>Seus dados</legend>
+
+                <label for="nome">Nome completo</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome completo"
+                    autocomplete="name"
+                    required
+                >
+
+                <label for="email">E-mail</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    autocomplete="email"
+                    required
+                >
+
+            </fieldset>
+
+
+            <!-- FORMA DE PAGAMENTO -->
+            <fieldset>
+
+                <legend>Forma de pagamento</legend>
+
+                <label class="opcao-pagamento">
+
+                    <input
+                        type="radio"
+                        name="pagamento"
+                        value="pix"
+                        required
+                    >
+
+                    <span class="opcao-texto">
+                        <strong>PIX</strong>
+                        <small>Pagamento instantâneo</small>
+                    </span>
+
+                </label>
+
+
+                <label class="opcao-pagamento">
+
+                    <input
+                        type="radio"
+                        name="pagamento"
+                        value="cartao"
+                    >
+
+                    <span class="opcao-texto">
+                        <strong>Cartão de crédito</strong>
+                        <small>Pagamento com cartão</small>
+                    </span>
+
+                </label>
+
+
+                <label class="opcao-pagamento">
+
+                    <input
+                        type="radio"
+                        name="pagamento"
+                        value="boleto"
+                    >
+
+                    <span class="opcao-texto">
+                        <strong>Boleto bancário</strong>
+                        <small>Pagamento por boleto</small>
+                    </span>
+
+                </label>
+
+            </fieldset>
+
+
+            <!-- RESUMO DA COMPRA -->
+            <section class="resumo-compra">
+
+                <h3>Resumo da compra</h3>
+
+                <div class="resumo-linha">
+                    <span>Produto</span>
+                    <span>Conforme sua seleção</span>
+                </div>
+
+                <div class="resumo-linha">
+                    <span>Frete</span>
+                    <span>A calcular</span>
+                </div>
+
+                <div class="resumo-linha total">
+                    <span>Total</span>
+                    <span>A calcular</span>
+                </div>
+
+            </section>
+
+
+            <!-- BOTÃO -->
+            <button type="submit" class="botao-finalizar">
+                CONTINUAR
+            </button>
+
+            <p class="aviso-seguranca">
+                Seus dados devem ser tratados com segurança.
+            </p>
+
+        </form>
+
+
+        <!-- VOLTAR PARA A LOJA -->
+        <a href="roupas.html" class="voltar-loja">
+            &larr; Voltar para a loja
+        </a>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="rodape-checkout">
+
+        <p>
+            &copy; 2026 Eclipse Wear — Wear The Darkness
+        </p>
+
+    </footer>
+
+</body>
+</html>
